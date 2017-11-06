@@ -4,7 +4,11 @@
     <title>Pacman</title>
     <meta charset="utf-8">
     <style>
-        
+            body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+        }
     </style>
     <script src="//cdn.jsdelivr.net/phaser/2.2.2/phaser.min.js"></script>
 </head>
@@ -55,8 +59,7 @@
 
             //  We need this because the assets are on github pages
             //  Remove the next 2 lines if running locally
-            this.load.baseURL = 'https://ioniodi.github.io/pacman/';
-            this.load.crossOrigin = 'anonymous';
+          
 
             this.load.image('dot', 'assets/dot.png');
             this.load.image('tiles', 'assets/pacman-tiles.png');
