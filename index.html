@@ -226,7 +226,7 @@
         eatDot: function (pacman, dot) {
 
             dot.kill();
-            this.game.add.audio('mpip');
+            this.sound.play('mpip');
 
             if (this.dots.total === 0)
             {
