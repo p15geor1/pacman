@@ -65,6 +65,7 @@
             this.load.baseURL = 'https://p15geor1.github.io/pacman/';
             this.load.crossOrigin = 'anonymous';
 
+            this.load.audio('mpip','assets/mpip.mp3')
             this.load.image('dot', 'assets/ant_food.png');
             this.load.image('tiles', 'assets/pacman-tiles.png');
             this.load.spritesheet('pacman', 'assets/pac_woman.png', 32, 32);
@@ -221,9 +222,11 @@
 
         },
 
+     
         eatDot: function (pacman, dot) {
 
             dot.kill();
+            this.game.add.audio('mpip');
 
             if (this.dots.total === 0)
             {
