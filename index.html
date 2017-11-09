@@ -72,8 +72,7 @@
             this.load.tilemap('map', 'assets/ant_map.json', null, Phaser.Tilemap.TILED_JSON);
 
             //  Needless to say, graphics (C)opyright Namco
-            var score = 0;
-            var scoreText;
+            
         },
 
         create: function () {
@@ -228,10 +227,13 @@
      
         eatDot: function (pacman, dot) {
 
+            var score = 0;
+            var scoreText;
+            
             dot.kill();
             this.sound.play('mpip');
             score += 1;
-            //scoreText.text = 'Score: ' + score;
+            scoreText.text = 'Score: ' + score;
             
             if (this.dots.total === 0)
             {
