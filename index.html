@@ -23,6 +23,9 @@
 
     var Pacman = function (game) {
 
+        var score = 0;
+        var scoreText;
+        
         this.map = null;
         this.layer = null;
         this.pacman = null;
@@ -226,9 +229,6 @@
 
      
         eatDot: function (pacman, dot) {
-
-            var score = 0;
-            var scoreText;
             
             dot.kill();
             this.sound.play('mpip');
